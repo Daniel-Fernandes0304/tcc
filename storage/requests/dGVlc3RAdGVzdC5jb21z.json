@@ -1,0 +1,17 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1699986347
+    },
+    "ApiLogin": {
+        "limit": 3,
+        "requests": 3,
+        "time": 1699986115
+    },
+    "usersCreate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1699986406
+    }
+}

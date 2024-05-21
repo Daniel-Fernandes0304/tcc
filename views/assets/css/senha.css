@@ -1,0 +1,168 @@
+.user {
+    width: 3.125rem;
+    color: #1c1c1c;
+    font-size: 1.4rem;
+    position: relative;
+    top: 1vh;
+    left: 660px;
+}
+
+body{
+    background-color: #ece7e7;
+}
+.header {
+    background-color: white;
+    display: flex;
+    padding: 0.625rem 1.25rem;
+    width: 100vw;
+    height: 13vh;
+    border: 3px solid rgb(167, 167, 167);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;  
+    }
+
+.logo_header {
+    display: flex;
+    align-items: center;
+}
+
+.logo_header img {
+    width: 13vw;
+    height: 16vh;
+    margin-left: 45vw;
+  }
+
+
+.conteudo_home {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid rgb(167, 167, 167);
+    padding: 0.625rem 1.25rem;
+    overflow-y: auto;
+    box-shadow: 0 10px 200px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+    color: #ff0000;
+    height: 14.5vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.fs-4 {
+    color: #000000;
+    margin-left: 2vw;
+}
+
+.sidebar a {  
+    text-decoration: none;
+}
+
+
+.formulario_home {
+    flex: 1;
+    padding: 20px;
+}
+
+.formulario-text_home {
+    margin-left: 35vw;
+    margin-top: 20vh;
+    font-size: 25px;
+    position: relative;
+    top: 25%;
+    color: #ff1010;
+}
+
+.form-control {
+    margin-bottom: 25px;
+    width: 30vw;
+    margin-left: -6vw;  
+    padding: 15px;
+}
+
+.botao_meio_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: -15vw;
+}
+
+.auth_form_btn {
+    margin-right: 10px;
+}
+.auth_form{
+    margin-top: -20vh;
+}
+.form-group{
+    background-color: rgb(230, 230, 230);
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8%;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    border: solid rgb(255, 255, 255);
+    box-shadow: 0 25px 60px rgba(228, 0, 0, 0.3);  
+   
+}
+.nav-link:hover {
+    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
+    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
+  }
+
+
+@media (max-width: 1390px) {
+    .sidebar {
+        background-color: #ffffff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 10px rgba(0, 0, 0, 0.1);
+        height: 86vh;
+        width: 14vw;
+      }
+
+      .auth_form {
+        max-width: 300px;
+        margin: auto;
+        margin-top: 6vh;
+    }
+
+    .form-control {
+        height: 5vh;
+        width: 30vw;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-left: -3vw;
+    }
+    
+    .user {
+        width: 50px;
+        color: #1c1c1c;
+        font-size: 22.4px;
+        position: relative;
+        top: 2vh;
+        left: 990px;
+      }
+}

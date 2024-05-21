@@ -1,0 +1,199 @@
+.header {
+    background-color: white;
+    display: flex;
+    padding: 0.625rem 1.25rem;
+    width: 100vw;
+    height: 13vh;
+    border: 3px solid rgb(167, 167, 167);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    position: relative;  /* Necessário para z-index funcionar */
+    }
+
+.user {
+  width: 3.125rem;
+  color: #1c1c1c;
+  font-size: 1.4rem;
+  position: relative;
+  top: 1vh;
+  left: 660px;
+}
+
+
+.logo_header {
+    display: flex;
+    align-items: center;
+}
+
+.logo_header img {
+    width: 13vw;
+    height: 16vh;
+    margin-left: 45vw;
+  }
+.pesquisa {
+    position: relative;
+    display: inline-block; 
+    margin-left: 25vw;
+    padding: 10px;
+}
+
+.enviar{
+  position: relative;
+  left: -10vw;
+}
+
+
+.pesquisa input[type="text"] {
+    width: 45vw; 
+    height: 5vh; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    margin-top: 10vh;
+    margin-right: 15vw;
+}
+
+
+.conteudo {
+    min-height: 100vh;
+    display: ruby-text;
+    background-color: #ece7e7;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid rgb(167, 167, 167);
+    padding: 0.625rem 1.25rem;
+    overflow-y: auto;
+    box-shadow: 0 10px 200px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+    }
+
+
+.fs-4 {
+    color: #000000;
+    margin-left: 2vw;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
+    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
+  }
+.pert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+    width: 5vw;
+    height: 5vh;
+    margin-left: 70vw;
+}
+
+
+.nav-link {
+    color: #ff0000;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.tabela-patrimonios {
+    width: 75%;
+    border-collapse: collapse;
+}
+
+.tabela-patrimonios, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
+    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
+  }
+
+ 
+@media (max-width: 1390px ) {
+
+    .user {
+        width: 3.125rem;
+        color: #1c1c1c;
+        font-size: 1.4rem;
+        position: relative;
+        top: 2vh;
+        left: 990px;
+      }
+  
+.sidebar {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 10px rgba(0, 0, 0, 0.1);
+    height: 86vh;
+    width: 14vw;
+    margin-top: -6.80vh;
+}
+
+button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
+    width: 15vw;
+    height: 5vh;
+    margin-left: 70vw;
+}
+
+.pesquisa input[type="text"] {
+    width: 45vw; 
+    height: 5vh; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    margin-top: 0vh;
+    margin-right: 15vw;
+}
+
+.pesquisa .icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    fill: #888; 
+    width: 3vw; 
+    height: 2vh;
+    margin-top: 0vh;
+    margin-right: 20vw;
+}
+
+}
