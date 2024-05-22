@@ -9,7 +9,8 @@ if ($_POST && !empty($_POST['nome_equipamento'])) {
     $nomeEquipamento = filter_var($_POST['nome_equipamento'], FILTER_SANITIZE_STRING);
     $tableData = new TableData();
     $patrimonios = $tableData->find("num_invent = :num_invent", "num_invent=$nomeEquipamento", '*')->fetch(true);
-}
+} 
+
 ?>
 
 <link rel="stylesheet" href="<?= CONF_URL_BASE ?>/views/assets/css/pesquisa.css"/>
@@ -67,19 +68,17 @@ if ($_POST && !empty($_POST['nome_equipamento'])) {
                         <th>Nome Equipamento</th>
                         <th>Observações</th>
                         <th>Código da Sala</th>
-            <!-- Adicione mais <th> aqui para outros detalhes do patrimônio -->
                     </tr>
                 </thead>
                 <?php foreach ($patrimonios as $patrimonio): ?>
                     <div class="resultado">        
                         <tbody>
                                 <tr>
-                                <td><?= htmlspecialchars($patrimonio->num_invent); ?></td>
-                                <td><?= htmlspecialchars($patrimonio->dt_incorp); ?></td>
-                                <td><?= htmlspecialchars($patrimonio->nome_equipamento); ?></td>
-                                <td><?= htmlspecialchars($patrimonio->observacoes); ?></td>
-                                <td><?= htmlspecialchars($patrimonio->codigo); ?></td>
-                <!-- Adicione mais <td> aqui para outros detalhes do patrimônio -->
+                                <td><?= $patrimonio->num_invent; ?></td>
+                                <td><?= $patrimonio->dt_incorp; ?></td>
+                                <td><?= $patrimonio->nome_equipamento; ?></td>
+                                <td><?= $patrimonio->observacoes; ?></td>
+                                <td><?= $patrimonio->codigo; ?></td>
                             </tr>
                         </tbody>
                     </div>
