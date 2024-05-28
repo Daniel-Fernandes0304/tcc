@@ -1,0 +1,12 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1699989820
+    },
+    "usersDelete": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1699989879
+    }
+}

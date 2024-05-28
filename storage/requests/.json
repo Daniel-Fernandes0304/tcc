@@ -1,0 +1,12 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1699984142
+    },
+    "usersCreate": {
+        "limit": 5,
+        "requests": 4,
+        "time": 1699984142
+    }
+}

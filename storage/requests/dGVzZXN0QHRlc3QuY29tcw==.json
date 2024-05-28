@@ -1,0 +1,12 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1699989137
+    },
+    "ApiLogin": {
+        "limit": 3,
+        "requests": 3,
+        "time": 1699989187
+    }
+}
