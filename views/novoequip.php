@@ -63,6 +63,13 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                 // Aqui você pode adicionar a lógica real para deletar o item, como uma requisição AJAX ou manipulação do DOM.
             }
         }
+
+        // Função para impedir a passagem de caracteres escolhida
+         function maxLengthCheck(object)
+         {
+        if (object.value.length > object.maxLength)
+         object.value = object.value.slice(0, object.maxLength)
+        }
     </script>
 
 
@@ -73,7 +80,7 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                 <div class="linha1">
                     <div>
                         <label for="text">ID</label>
-                        <input class="inputFormularioID" type="number" name="numeInvent" id='numeInvent' required>
+                        <input class="inputFormularioID" oninput="maxLengthCheck(this)" maxlength="7" type="number" name="numeInvent" id='numeInvent' required>
                     </div>
                     <div>
                         <label for="text">INSTITUIÇÃO</label>

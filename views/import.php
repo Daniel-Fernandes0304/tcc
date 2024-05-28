@@ -6,7 +6,7 @@ use Source\Models\Login;
 $tipo = Login::user()->tipo;
 
 $msg = '';
-
+// Permite a visualização da 'tabela .csv', pegando a posição das linhas da tabela
 if (isset($_POST['ver'])) {
     $arquivo = $_FILES['arquivo'];
 
@@ -30,6 +30,7 @@ if (isset($_POST['ver'])) {
 
 }
 
+// Faz a importação diretamente para o banco de dados, através da posição das linhas da tabela
 if (isset($_POST["import"])) {
     $arquivo = $_FILES['arquivo'];
 
@@ -40,23 +41,22 @@ if (isset($_POST["import"])) {
         while ($linha = fgetcsv($dados_arquivo, 1000, ";")) {
 
             $objTableData = new TableData();
-
             $objTableData->num_invent = $linha[0];
             $objTableData->dt_incorp = date('Y-m-d', strtotime($linha[1]));
             $objTableData->nome_equipamento = mb_convert_encoding($linha[2], 'UTF-8', "ISO-8859-1");
             $objTableData->localizacao = $linha[3];
             $objTableData->ambiente = mb_convert_encoding($linha[4], 'UTF-8', "ISO-8859-1");
             $objTableData->codigo = $linha[5];
-            $objTableData->status = 'a';
-            $objTableData->equip_emprestado = 'a';
-            $objTableData->descricao = 'a';
-            $objTableData->observacoes = 'a';
-            $objTableData->tag = '2';
-            $objTableData->valor = '2';
-            $objTableData->serie = '2';
-            $objTableData->marca = 'a';
-            $objTableData->bloco = 'a';
-            $objTableData->instituicao = 'a';
+            $objTableData->status = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->equip_emprestado = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->descricao = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->observacoes = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->tag = '2'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->valor = '2'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->serie = '2'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->marca = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->bloco = 'a'; // Mudar quando tiver a informação vindo da tabela
+            $objTableData->instituicao = 'a'; // Mudar quando tiver a informação vindo da tabela
 
             $objTableData->save();
             $msg = 'Importado com sucesso';

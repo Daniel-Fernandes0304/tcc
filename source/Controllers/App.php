@@ -37,12 +37,13 @@ class App extends Controller
     {
 
         $msg = '';
+        // Cadastra novos usuários, após enviar as informações
         if ($form) {
 
             if (isset($_POST["cadastrar"])) {
                 $objUser = new User();
             }
-
+            // Salva os dados vindos do form no banco de dados
             $objUser->nome = $form['nome_user'];
             $objUser->email = $form['email_user'];
             $objUser->senha = $form['senha_user'];
@@ -70,7 +71,7 @@ class App extends Controller
     public function altsenha(array $form)
     {
         $msg = "";
-
+        // Troca a senha do usuário através do id dele
         if ($form) {
             $user = new User();
             $user->id = $form['id'];
@@ -131,7 +132,7 @@ class App extends Controller
             if (isset($_POST["salvar"])) {
                 $objTableData = new TableData();
             }
-
+            // Manda os dados vindos do 'form' para o banco de dados
             $objTableData->num_invent = $form['numeInvent'];
             $objTableData->instituicao = $form['instituicao'];
             $objTableData->nome_equipamento = $form['nomeequip'];
