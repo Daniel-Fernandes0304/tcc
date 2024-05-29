@@ -481,7 +481,24 @@ body {
 }
 
 .nav-link {
-    color: #ff1010;
-    height: 13vh;
+  background-color: #ff3232;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  text-decoration: none;
+  margin-top: 6vh;
+}
 
+.btn-link{
+text-decoration: none;
+color: #ffffff; 
+font-size: 20px;
+}
+
+
+
+.nav-link:hover{
+        background-color: #ff7575;
+        transition: backgroud-color 0.05s ease;
 }

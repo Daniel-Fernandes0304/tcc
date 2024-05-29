@@ -26,7 +26,8 @@
   .logo_header img {
     width: 13vw;
     height: 16vh;
-    margin-left: 45vw;
+    position: relative;
+    left: 45vw;
   }
   
   .conteudo {

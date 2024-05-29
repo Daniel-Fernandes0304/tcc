@@ -2,7 +2,6 @@
     background-color: white;
     display: flex;
     padding: 0.625rem 1.25rem;
-    width: 100vw;
     height: 13vh;
     border: 3px solid rgb(167, 167, 167);
     border-radius: 10px;
@@ -10,14 +9,14 @@
     position: relative;  /* Necessário para z-index funcionar */
     }
 
-.user {
-  width: 3.125rem;
-  color: #1c1c1c;
-  font-size: 1.4rem;
-  position: relative;
-  top: 1vh;
-  left: 660px;
-}
+  .user {
+    width: 3.125rem;
+    color: #1c1c1c;
+    font-size: 1.4rem;
+    position: relative;
+    top: 1vh;
+    left: 80%;
+  }
 
 
 .logo_header {
@@ -28,20 +27,16 @@
 .logo_header img {
     width: 13vw;
     height: 16vh;
-    margin-left: 45vw;
+    position: relative;
+    left: 45vw;
   }
+
 .pesquisa {
     position: relative;
     display: inline-block; 
     margin-left: 25vw;
     padding: 10px;
 }
-
-.enviar{
-  position: relative;
-  left: -10vw;
-}
-
 
 .pesquisa input[type="text"] {
     width: 45vw; 
@@ -79,10 +74,28 @@
     margin-left: 2vw;
 }
 
-.nav-link:hover {
-    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
-    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
-  }
+.nav-link {
+    background-color: #ff3232;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+    margin-top: 6vh;
+}
+
+.btn-link{
+  text-decoration: none;
+  color: #ffffff; 
+  font-size: 20px;
+}
+
+
+
+.nav-link:hover{
+          background-color: #ff7575;
+          transition: backgroud-color 0.05s ease;
+}
 .pert {
     display: flex;
     justify-content: center;
@@ -90,7 +103,7 @@
     flex-direction: column;
 }
 
-button {
+.enviar{
     background-color: #ffffff;
     color: #000000;
     font-size: 20px;
@@ -99,24 +112,12 @@ button {
     box-shadow: rgb(0, 0, 0) 0.0625rem 0.0625rem 0.0625rem 0.0625rem;
     width: 5vw;
     height: 5vh;
-    margin-left: 70vw;
-}
-
-
-.nav-link {
-    color: #ff0000;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    text-decoration: none;
+    position: relative;
+    left: -10vw;
 }
 
 
 
-.nav-item {
-    margin-bottom: 10px;
-}
 
 .tabela-patrimonios {
     width: 75%;
@@ -136,10 +137,7 @@ th {
     background-color: #f2f2f2;
 }
 
-.nav-link:hover {
-    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
-    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
-  }
+
 
  
 @media (max-width: 1390px ) {

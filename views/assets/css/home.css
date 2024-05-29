@@ -20,7 +20,8 @@ body{
 .logo_header img {
   width: 13vw;
   height: 16vh;
-  margin-left: 45vw;
+  position: relative;
+  left: 45vw;
 }
 
 .sidebar {
@@ -53,28 +54,37 @@ body{
 }
 
 .nav-link {
-    color: #ff0000;
-    height: 14.5vh;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    text-decoration: none;
+  background-color: #ff3232;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  text-decoration: none;
+  margin-top: 6vh;
 }
+
+.btn-link{
+text-decoration: none;
+color: #ffffff; 
+font-size: 20px;
+}
+
+
 
 .nav-link:hover{
-          background-color: #f0f0f0;
-          transition: backgroud-color 0.05s ease;
+        background-color: #ff7575;
+        transition: backgroud-color 0.05s ease;
 }
-
 
 .user {
-    width: 3.125rem;
-    color: #1c1c1c;
-    font-size: 1.4rem;
-    position: relative;
-    top: 1vh;
-    left: 660px;
+  width: 3.125rem;
+  color: #1c1c1c;
+  font-size: 1.4rem;
+  position: relative;
+  top: 1vh;
+  left: 80%;
 }
+
   #animation {
     font-size: 60px;
     position: absolute;

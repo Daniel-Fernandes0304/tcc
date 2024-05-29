@@ -23,25 +23,35 @@ if ($_SESSION['nivelAcesso'] !== '1') {
 
         <ul id="menuItems" class="nav nav-pills flex-column mb-auto" style="display: none;">
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link" onclick="showMenuItem('Importar')">Importar</a>
+                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Importar')">Importar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link" onclick="showMenuItem('Novo')">Novo</a>
+                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Novo')">Novo</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link"
-                    onclick="showMenuItem('Pesquisar')">Pesquisar</a>
+                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Pesquisar')">Pesquisar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link" onclick="showMenuItem('Usuário')">Usuário</a>
+                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Usuário')">Usuário</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link" onclick="showMenuItem('Senha')">Senha</a>
+                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Senha')">Senha</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link" onclick="showMenuItem('Sair')">Sair</a>
+                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Sair')">Sair</button>
+                </a>
             </li>
-
         </ul>
     </div>
 
@@ -61,9 +71,12 @@ if ($_SESSION['nivelAcesso'] !== '1') {
             <form class="auth_form" method="post" name="formulario">
                 <p class="formulario-text_home"><b>Alterar Senha</b> </p>
                 <span name="resultado-pesquisa" id="resultado-pesquisa"></span>
-                <input type="text" name="nome" id='nomeUsuario' class="form-control" autocomplete="off" placeholder="Usuário:" required>
-                <input type="password" name="senhaUser" id='senhaUser' class="form-control" placeholder="Mudar senha(min 5 caracteres):" required>
-                <input type="password" name="csenha" id='csenha' class="form-control" placeholder="Confirme Senha:" required>
+                <input type="text" name="nome" id='nomeUsuario' class="form-control" autocomplete="off"
+                    placeholder="Usuário:" required>
+                <input type="password" name="senhaUser" id='senhaUser' class="form-control"
+                    placeholder="Mudar senha(min 5 caracteres):" required>
+                <input type="password" name="csenha" id='csenha' class="form-control" placeholder="Confirme Senha:"
+                    required>
                 <input type="hidden" name="id" id="id" value="" />
                 <div class="botao_meio_home">
                     <button type="submit" name='alterar' id='alterar' class="auth_form_btn btn btn-danger">OK</button>

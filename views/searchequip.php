@@ -9,16 +9,16 @@ $patrimonios = [];
 $selectOption = '';
 $nomeEquipamento = '';
 // Pesquisa por filtro
-if ($_POST && !empty($_POST['nome_equipamento'])) {
+if ($_POST && !empty($_POST['pesquisa'])) {
     // Salva o nome do equipamento pesquisado
-    $nomeEquipamento = trim($_POST['nome_equipamento']);
+    $nomeEquipamento = trim($_POST['pesquisa']);
 
     $tableData = new TableData();
     // Salva a opção que vai ser filtrada (nome, número de equipamento e código da sala)
     $selectOption = $_POST['equipamento'];
     // Verifica a opção que foi escolhida, e faz a pesquisa com base no filtro selecionado.
     if ($selectOption === 'nome') {
-        $patrimonios = $tableData->find("nome_equipamento LIKE :nome_equipamento", "nome_equipamento=%{$nomeEquipamento}%", '*')->fetch(true);
+        $patrimonios = $tableData->find("nome_equipamento LIKE :nome_equipamento", "nome_equipamento={$nomeEquipamento}%", '*')->fetch(true);
     } elseif ($selectOption === 'num_patrimonio') {
         $patrimonios = $tableData->find("num_invent = :num_invent", "num_invent=$nomeEquipamento", '*')->fetch(true);
     } elseif ($selectOption === 'sala') {
@@ -43,42 +43,49 @@ if ($_POST && !empty($_POST['nome_equipamento'])) {
 
                 <ul id="menuItems" class="nav nav-pills flex-column mb-auto" style="display: none;">
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/import" class="nav-link"
-                            onclick="showMenuItem('Importar')">Importar</a>
+                        <a href="<?= CONF_URL_BASE ?>/import" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Importar')">Importar</button>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link" onclick="showMenuItem('Novo')">Novo</a>
+                        <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Novo')">Novo</button>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link"
-                            onclick="showMenuItem('Pesquisar')">Pesquisar</a>
+                        <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Pesquisar')">Pesquisar</button>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link"
-                            onclick="showMenuItem('Usuário')">Usuário</a>
+                        <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Usuário')">Usuário</button>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link"
-                            onclick="showMenuItem('Senha')">Senha</a>
+                        <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Senha')">Senha</button>
+                        </a>
                     </li>
-
                     <li class="nav-item">
-                        <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link" onclick="showMenuItem('Sair')">Sair</a>
+                        <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link">
+                            <button class="btn btn-link" onclick="showMenuItem('Sair')">Sair</button>
+                        </a>
                     </li>
-
                 </ul>
             </div>
         </div>
 
         <form class="auth_form" method="post" name="formulario">
             <div style='position: relative; top: 100px; display: flex; gap: 10px;'>
-                <input type="radio" name="equipamento" id="equipamento" value='nome' checked <?= ($selectOption === 'nome') ? 'checked' : '' //Deixa o 'input radio' com check para salvar o filtro escolhido?>>Nome Equipamento
-                <input type="radio" name="equipamento" id="equipamento" value='num_patrimonio' <?= ($selectOption === 'num_patrimonio') ? 'checked' : '' ?>>N° Patrimônio
+                <input type="radio" name="equipamento" id="equipamento" value='nome' checked <?= ($selectOption === 'nome') ? 'checked' : '' //Deixa o 'input radio' com check para salvar o filtro escolhido ?>>Nome Equipamento
+                <input type="radio" name="equipamento" id="equipamento" value='num_patrimonio'
+                    <?= ($selectOption === 'num_patrimonio') ? 'checked' : '' ?>>N° Patrimônio
                 <input type="radio" name="equipamento" id="equipamento" value='sala' <?= ($selectOption === 'sala') ? 'checked' : '' ?>>Código da Sala
             </div>
             <br>
-            <input type="text" id="nomeEquipment" name="nome_equipamento" autocomplete="off"
-                placeholder="Pesquisa...." />
+            <input type="text" id="nomeEquipment" name="pesquisa" autocomplete="off" placeholder="Pesquisa...."
+                required />
             <button type="submit" class="enviar">Enviar</button>
         </form>
         <!-- Exibe resultados da pesquisa -->

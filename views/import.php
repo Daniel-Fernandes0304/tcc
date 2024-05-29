@@ -83,33 +83,36 @@ if ($_SESSION['nivelAcesso'] !== '1') {
         </a>
 
         <ul id="menuItems" class="nav nav-pills flex-column mb-auto" style="display: none;">
-            <!--representa uma lista não ordenada (ul) com o id "menuItems" e classes "nav", "nav-pills", "flex-column" e "mb-auto". Além disso, o estilo "display: none;" está aplicado, o que significa que inicialmente a lista estará oculta na página.-->
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link" onclick="showMenuItem('Importar')">Importar</a>
-                <!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Importar')  é chamada para exibir o conteúdo relacionado à opção "Importar" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Importar')">Importar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link" onclick="showMenuItem('Novo')">Novo</a>
-                <!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Novo')  é chamada para exibir o conteúdo relacionado à opção "Novo" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Novo')">Novo</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link"
-                    onclick="showMenuItem('Pesquisar')">Pesquisar</a><!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Pesquisar')  é chamada para exibir o conteúdo relacionado à opção "Pesquisar" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Pesquisar')">Pesquisar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link"
-                    onclick="showMenuItem('Usuário')">Usuário</a><!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Usuário')  é chamada para exibir o conteúdo relacionado à opção "Usuário" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Usuário')">Usuário</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link"
-                    onclick="showMenuItem('Senha')">Senha</a><!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Senha')  é chamada para exibir o conteúdo relacionado à opção "Senha" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Senha')">Senha</button>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link"
-                    onclick="showMenuItem('Sair')">Sair</a><!--representa um item de lista dentro de um menu de navegação. Quando o link é clicado, a função JavaScript showMenuItem('Sair')  é chamada para exibir o conteúdo relacionado à opção "Sair" no menu.-->
+                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Sair')">Sair</button>
+                </a>
             </li>
-
         </ul>
 
 

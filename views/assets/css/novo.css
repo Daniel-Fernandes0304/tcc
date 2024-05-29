@@ -29,7 +29,7 @@ body {
     font-size: 1.4rem;
     position: relative;
     top: 1vh;
-    left: 660px;
+    left: 80%;
   }
 
   .sidebar {
@@ -64,9 +64,9 @@ body {
 .logo_header img {
     width: 13vw;
     height: 16vh;
-    margin-left: 45vw;
+    position: relative;
+    left: 45vw;
 }
-
 
 .conteudo-novo {
     display: flex;
@@ -294,14 +294,27 @@ body {
 }
 
 .nav-link {
-    color: #ff1010;
-    height: 14vh; 
+    background-color: #ff3232;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-decoration: none;
+    margin-top: 6vh;
 }
 
-.nav-link:hover {
-    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
-    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
-  }
+.btn-link{
+  text-decoration: none;
+  color: #ffffff; 
+  font-size: 20px;
+}
+
+
+
+.nav-link:hover{
+          background-color: #ff7575;
+          transition: backgroud-color 0.05s ease;
+}
 
   .inputFormulario, .inputFormularioID, .inputFormulario1 {
     border-radius: 5px; /* Define o raio da borda */

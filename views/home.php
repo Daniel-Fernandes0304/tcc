@@ -22,28 +22,36 @@ $tipo = Login::user()->tipo;
             onclick="toggleMenu()">
             <span class="fs-4">Menu</span>
         </a>
-
-
         <ul id="menuItems" class="nav nav-pills flex-column mb-auto" style="display: none;">
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link" onclick="showMenuItem('Importar')">Importar</a>
+                <a href="<?= CONF_URL_BASE ?>/import" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Importar')">Importar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link" onclick="showMenuItem('Novo')">Novo</a>
+                <a href="<?= CONF_URL_BASE ?>/novo" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Novo')">Novo</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link"
-                    onclick="showMenuItem('Pesquisar')">Pesquisar</a>
+                <a href="<?= CONF_URL_BASE ?>/searchequip" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Pesquisar')">Pesquisar</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link" onclick="showMenuItem('Usuário')">Usuário</a>
+                <a href="<?= CONF_URL_BASE ?>/usuario" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Usuário')">Usuário</button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link" onclick="showMenuItem('Senha')">Senha</a>
+                <a href="<?= CONF_URL_BASE ?>/altsenha" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Senha')">Senha</button>
+                </a>
             </li>
-
             <li class="nav-item">
-                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link" onclick="showMenuItem('Sair')">Sair</a>
+                <a href="<?= CONF_URL_BASE ?>/sair" class="nav-link">
+                    <button class="btn btn-link" onclick="showMenuItem('Sair')">Sair</button>
+                </a>
             </li>
         </ul>
     </div>

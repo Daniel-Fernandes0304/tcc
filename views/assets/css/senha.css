@@ -4,8 +4,8 @@
     font-size: 1.4rem;
     position: relative;
     top: 1vh;
-    left: 660px;
-}
+    left: 80%;
+  }
 
 body{
     background-color: #ece7e7;
@@ -30,7 +30,8 @@ body{
 .logo_header img {
     width: 13vw;
     height: 16vh;
-    margin-left: 45vw;
+    position: relative;
+    left: 45vw;
   }
 
 
@@ -56,12 +57,26 @@ body{
 }
 
 .nav-link {
-    color: #ff0000;
-    height: 14.5vh;
+    background-color: #ff3232;
+    height: 8vh;
     display: flex;
     align-items: center;
     padding: 0 15px;
     text-decoration: none;
+    margin-top: 6vh;
+}
+
+.btn-link{
+  text-decoration: none;
+  color: #ffffff; 
+  font-size: 20px;
+}
+
+
+
+.nav-link:hover{
+          background-color: #ff7575;
+          transition: backgroud-color 0.05s ease;
 }
 
 .fs-4 {
@@ -125,11 +140,6 @@ body{
     box-shadow: 0 25px 60px rgba(228, 0, 0, 0.3);  
    
 }
-.nav-link:hover {
-    background-color: #f0f0f0; /* Adicionei uma cor de fundo ao passar o mouse */
-    transition: background-color 0.5s ease; /* Adicionei uma transição suave */
-  }
-
 
 @media (max-width: 1390px) {
     .sidebar {
