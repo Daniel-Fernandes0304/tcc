@@ -89,11 +89,11 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                     <div>
                         <label for="text">ID</label>
                         <input class="inputFormularioID" oninput="maxLengthCheck(this)" maxlength="7" type="number"
-                            name="numeInvent" id='numeInvent' required>
+                            name="numeInvent" id='numeInvent' placeholder="Nº Patrimônio" required>
                     </div>
                     <div>
                         <label for="text">INSTITUIÇÃO</label>
-                        <select name="instituicao" id='instituicao' placeholder="Tipo" class="inputFormulario" required>
+                        <select name="instituicao" id='instituicao' class="inputFormulario" required>
                             <option id="senai" value="SENAI">SENAI</option>
                             <option id="Fundação Shunji Nishimura" value="Fundação Shunji Nishimura">Fundação Shunji
                                 Nishimura</option>
@@ -101,7 +101,7 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                     </div>
                     <div>
                         <label for="text">NOME EQUIPAMENTO</label>
-                        <input class="inputFormulario" type="text" name="nomeequip" id='nomeequip' required>
+                        <input class="inputFormulario" type="text" name="nomeequip" id='nomeequip' placeholder="Nome do Patrimônio" required>
                     </div>
                     <div>
                         <label for="text">TAG</label>
@@ -116,7 +116,7 @@ if ($_SESSION['nivelAcesso'] !== '1') {
 
                     <div class="linha2ab">
                         <label for="text">AMBIENTE</label>
-                        <input class="inputFormulario" type="text" name="ambiente" id='ambiente' required>
+                        <input class="inputFormulario" type="text" placeholder="Nome da Sala" name="ambiente" id='ambiente' required>
                     </div>
                     <div class="linha2data">
                         <label for="text">DATA</label>
@@ -127,30 +127,36 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                 <div class="linha3">
                     <div class="linha3marca">
                         <label for="text">MARCA</label>
-                        <input class="inputFormulario" type="text" name="marca" id='marca' required>
+                        <input class="inputFormulario" type="text" placeholder="Ex.(Cisco)" name="marca" id='marca' required>
                     </div>
                     <div class="linha3serie">
-                        <label for="number">SERIE</label>
-                        <input class="inputFormulario" type="number" name="serie" id='serie' required>
+                        <label for="number">SÉRIE</label>
+                        <input class="inputFormulario" type="number" name="serie" placeholder="Nº de série" id='serie' required>
                     </div>
                     <div class="linha3valor">
                         <label for="text">VALOR</label>
-                        <input class="inputFormulario" type="number" name="valor" id='valor' required>
+                        <input class="inputFormulario" type="number" placeholder="Preço" name="valor" id='valor' required>
                     </div>
                 </div>
 
                 <div class="linha4">
                     <div>
                         <label for="text">SALA</label>
-                        <input class="inputFormulario" type="text" name="sala" id='sala' required>
+                        <input class="inputFormulario" type="text" placeholder="Ex.(A1, A2, B1...)" name="sala" id='sala' required>
                     </div>
                     <div class="linha4local">
                         <label for="text">LOCAL</label>
-                        <input class="inputFormulario" type="number" name="local" id='local' required>
+                        <input class="inputFormulario" type="number" name="local" oninput="maxLengthCheck(this)" maxlength="8" placeholder="Ex.(12029823)" id='local' required>
                     </div>
                     <div>
                         <label for="text">BLOCO</label>
-                        <input class="inputFormulario" type="text" name="bloco" id='bloco' required>
+                        <select name="bloco" id='bloco' class="inputFormulario" required style="padding: 6px 59px;">
+                            <option id="a" value="A">Bloco A</option>
+                            <option id="b" value="B">Bloco B</option>
+                            <option id="c" value="C">Bloco C</option>
+                            <option id="d" value="D">Bloco D</option>
+                            <option id="e" value="E">Bloco E</option>
+                        </select>
                     </div>
                 </div>
         </div>
