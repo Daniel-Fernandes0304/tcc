@@ -93,7 +93,7 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                     </div>
                     <div>
                         <label for="text">INSTITUIÇÃO</label>
-                        <select name="instituicao" id='instituicao' class="inputFormulario" required>
+                        <select name="instituicao" id='instituicao' class="inputFormulario" style="padding: 5px;" required>
                             <option id="senai" value="SENAI">SENAI</option>
                             <option id="Fundação Shunji Nishimura" value="Fundação Shunji Nishimura">Fundação Shunji
                                 Nishimura</option>
@@ -142,7 +142,7 @@ if ($_SESSION['nivelAcesso'] !== '1') {
                 <div class="linha4">
                     <div>
                         <label for="text">SALA</label>
-                        <input class="inputFormulario" type="text" placeholder="Ex.(A1, A2, B1...)" name="sala" id='sala' required>
+                        <input class="inputFormulario" type="text" oninput="maxLengthCheck(this)" maxlength="3" placeholder="Ex.(A1, A2, B1...)" name="sala" id='sala' required>
                     </div>
                     <div class="linha4local">
                         <label for="text">LOCAL</label>

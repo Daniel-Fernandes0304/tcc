@@ -42,7 +42,10 @@ body {
 
 }
 
-
+.importarrr {
+    position: relative;
+    left: 15%;
+}
 
 .logo_header {
   display: flex;

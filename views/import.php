@@ -16,12 +16,12 @@ if (isset($_POST['ver'])) {
 
         while ($linha = fgetcsv($dados_arquivo, 1000, ";")) {
 
-            echo "Nº invent: " . mb_convert_encoding($linha[0], "UTF-8", "ISO-8859-1") . "<br>";
-            echo "Dt.incorp: " . mb_convert_encoding($linha[1], "UTF-8", "ISO-8859-1") . "<br>";
-            echo "Denominação do imobilizado: " . mb_convert_encoding($linha[2], "UTF-8", "ISO-8859-1") . "<br>";
-            echo "Localização: " . mb_convert_encoding($linha[3], "UTF-8", "ISO-8859-1") . "<br>";
-            echo "Ambiente: " . mb_convert_encoding($linha[4], "UTF-8", "ISO-8859-1") . "<br>";
-            echo "Código: " . mb_convert_encoding($linha[5], "UTF-8", "ISO-8859-1") . "<br>";
+            echo "<div class = 'importarrr'>Nº invent: " . mb_convert_encoding($linha[0], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
+            echo "<div class = 'importarrr'>Dt.incorp: " . mb_convert_encoding($linha[1], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
+            echo "<div class = 'importarrr'>Denominação do imobilizado: " . mb_convert_encoding($linha[2], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
+            echo "<div class = 'importarrr'>Localização: " . mb_convert_encoding($linha[3], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
+            echo "<div class = 'importarrr'>Ambiente: " . mb_convert_encoding($linha[4], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
+            echo "<div class = 'importarrr'>Código: " . mb_convert_encoding($linha[5], "UTF-8", "ISO-8859-1") . "<br>". "</div>";
             echo "<hr>";
         }
     } else {
