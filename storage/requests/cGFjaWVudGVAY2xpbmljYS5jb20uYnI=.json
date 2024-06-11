@@ -1,0 +1,32 @@
+{
+    "Api": {
+        "limit": 1,
+        "requests": 1,
+        "time": 1699989281
+    },
+    "usersUpdate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1699988957
+    },
+    "ApiLogin": {
+        "limit": 3,
+        "requests": 1,
+        "time": 1699989005
+    },
+    "usersRead": {
+        "limit": 5,
+        "requests": 2,
+        "time": 1699988849
+    },
+    "usersCreate": {
+        "limit": 5,
+        "requests": 1,
+        "time": 1699988821
+    },
+    "usersDelete": {
+        "limit": 5,
+        "requests": 2,
+        "time": 1699989331
+    }
+}

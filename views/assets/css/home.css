@@ -1,0 +1,136 @@
+body{
+    background-color: #ece7e7;
+}
+.header {
+  background-color: rgb(255, 255, 255);
+    display: flex;
+    padding: 0.625rem 1.25rem;
+    width: 100vw;
+    height: 13vh;
+    border: 2px solid rgb(167, 167, 167);
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+
+.logo_header {
+    display: flex;
+    align-items: center;
+}
+
+.logo_header img {
+  width: 13vw;
+  height: 16vh;
+  position: relative;
+  left: 45vw;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid rgb(167, 167, 167);
+  padding: 0.625rem 1.25rem;
+  overflow-y: auto;
+  box-shadow: 0 10px 200px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.fs-4 {
+  color: #000000;
+  margin-left: 2vw;
+}
+
+.nav-link {
+  background-color: #ff3232;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  text-decoration: none;
+  margin-top: 6vh;
+}
+
+.btn-link{
+text-decoration: none;
+color: #ffffff; 
+font-size: 20px;
+}
+
+
+
+.nav-link:hover{
+        background-color: #ff7575;
+        transition: backgroud-color 0.05s ease;
+}
+
+.user {
+  width: 3.125rem;
+  color: #1c1c1c;
+  font-size: 1.4rem;
+  position: relative;
+  top: 1vh;
+  left: 80%;
+}
+
+  #animation {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeIn 2s forwards, blink 1s infinite 2s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 1384px) {
+
+    
+    .nav-link {
+        color: #ff0000;
+        height: 10vh;
+    }
+    
+    .user {
+        width: 50px;
+        color: #1c1c1c;
+        font-size: 1.4rem;
+        position: relative;
+        top: -6px;
+        left: 80vw;
+    }
+            
+      }
